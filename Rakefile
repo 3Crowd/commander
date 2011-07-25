@@ -1,9 +1,11 @@
-
 $:.unshift 'lib'
 require 'commander'
 require 'rubygems'
 require 'rake'
 require 'echoe'
+
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new :spec
 
 Echoe.new "commander", Commander::VERSION do |p|
   p.author = "TJ Holowaychuk"
